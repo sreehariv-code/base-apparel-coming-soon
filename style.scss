@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  --d-red: hsl(0, 36%, 70%);
+  --s-red: hsl(0, 93%, 68%);
+  --d-g-red: hsl(0, 6%, 24%);
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 main {
@@ -10,5 +18,136 @@ main {
     linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
   .container {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .header {
+      opacity: 0;
+      display: none;
+    }
+    .hero-section {
+      // width: 41%;
+      // background: red;
+      min-width: 500px;
+      display: flex;
+      .hero-desktop {
+        width: 100%;
+      }
+      .hero-mobile {
+        opacity: 0;
+        display: none;
+      }
+    }
+    .content {
+      background: url("./images/bg-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      height: 100%;
+      background-size: cover;
+      // background: yellow;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-left: 9rem;
+      // padding-top: 5rem;
+      // padding-bottom: 9rem;
+
+      .desktop-logo {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: block;
+      }
+      .heading {
+        padding-top: 3rem;
+        font-size: 4rem;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        color: var(--d-g-red);
+        span {
+          font-weight: 200;
+          color: var(--d-red);
+          font-size: inherit;
+        }
+      }
+      .description {
+        color: var(--d-red);
+        width: 45ch;
+        margin-top: 1rem;
+        line-height: 1.5rem;
+      }
+      form {
+        margin-top: 1.4rem;
+        width: 100%;
+        position: relative;
+        padding-bottom: 5rem;
+        .input-container {
+          border: 1.5px solid var(--d-red);
+          max-width: 390px;
+          min-height: 50px;
+          display: flex;
+          overflow: hidden;
+          // align-items: center;
+          justify-content: space-between;
+          border-radius: 50px;
+          // padding: 0rem 2rem;
+          input {
+            outline: none;
+            border: none;
+            padding: 1.2rem 0 1rem 1.3rem;
+            background: transparent;
+          }
+          ::placeholder {
+            color: var(--d-red);
+          }
+          .btn-section {
+            // background-color: red;
+            // height: 100%;
+            display: flex;
+            .error {
+              display: none;
+              opacity: 0;
+              height: 100%;
+              &.show {
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                opacity: 1;
+                // max-height: 30px;
+              }
+            }
+            .submit-btn {
+              cursor: pointer;
+              outline: none;
+              border: none;
+              min-width: 90px;
+              padding-top: 0.4rem;
+              background: linear-gradient(
+                135deg,
+                hsl(0, 80%, 86%),
+                hsl(0, 74%, 74%)
+              );
+              border-radius: 50px;
+              height: 100%;
+              &:hover {
+                translate: 0px -0.3px;
+                background: linear-gradient(
+                  135deg,
+                  hsla(0, 80%, 86%, 0.5),
+                  hsla(0, 74%, 74%, 0.7)
+                );
+              }
+            }
+          }
+        }
+        .danger-text {
+          margin-top: 1.5rem;
+        }
+      }
+    }
   }
 }

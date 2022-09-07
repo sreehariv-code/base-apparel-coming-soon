@@ -30,15 +30,36 @@
         <img src="./images/logo.svg" alt="">
       </div>
       <div class="hero-section">
-        <img src="./images/hero-mobile.jpg" alt="hero-img">
+        <img src="./images/hero-desktop.jpg" alt="hero-img" class="hero-desktop">
+        <img class="hero-mobile" src="./images/hero-mobile.jpg" alt="hero-img">
       </div>
       <div class="content">
-        We're coming soon
-
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.
-
-        Email Address
+        <div class="desktop-logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <p class="heading">
+          <span>We're</span> coming <br /> soon
+        </p>
+        <p class="description">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form action="/index.html" id="form" novalidate>
+          <div class="input-container">
+            <input type="email" class="form-control" placeholder="Email Address">
+            <div class="btn-section">
+              <div class="error">
+                <img src="./images/icon-error.svg" alt="">
+              </div>
+              <button title="submit" type="submit" class="submit-btn">
+                <img src="./images/icon-arrow.svg" alt="" class="arrow">
+              </button>
+            </div>
+          </div>
+          <div class="danger-text">
+            please provide a valid email
+          </div>
+        </form>
       </div>
     </div>
   </main>

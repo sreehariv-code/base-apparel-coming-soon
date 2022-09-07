@@ -1,10 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  --d-red: hsl(0, 36%, 70%);
+  --s-red: hsl(0, 93%, 68%);
+  --d-g-red: hsl(0, 6%, 24%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 main {
   min-height: 100vh;
   background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%)), linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+}
+main .container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+main .container .header {
+  opacity: 0;
+  display: none;
+}
+main .container .hero-section {
+  min-width: 500px;
+  display: flex;
+}
+main .container .hero-section .hero-desktop {
+  width: 100%;
+}
+main .container .hero-section .hero-mobile {
+  opacity: 0;
+  display: none;
+}
+main .container .content {
+  background: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 9rem;
+}
+main .container .content .desktop-logo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: block;
+}
+main .container .content .heading {
+  padding-top: 3rem;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: var(--d-g-red);
+}
+main .container .content .heading span {
+  font-weight: 200;
+  color: var(--d-red);
+  font-size: inherit;
+}
+main .container .content .description {
+  color: var(--d-red);
+  width: 45ch;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+main .container .content form {
+  margin-top: 1.4rem;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5rem;
+}
+main .container .content form .input-container {
+  border: 1.5px solid var(--d-red);
+  max-width: 390px;
+  min-height: 50px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  border-radius: 50px;
+}
+main .container .content form .input-container input {
+  outline: none;
+  border: none;
+  padding: 1.2rem 0 1rem 1.3rem;
+  background: transparent;
+}
+main .container .content form .input-container ::-moz-placeholder {
+  color: var(--d-red);
+}
+main .container .content form .input-container :-ms-input-placeholder {
+  color: var(--d-red);
+}
+main .container .content form .input-container ::placeholder {
+  color: var(--d-red);
+}
+main .container .content form .input-container .btn-section {
+  display: flex;
+}
+main .container .content form .input-container .btn-section .error {
+  display: none;
+  opacity: 0;
+  height: 100%;
+}
+main .container .content form .input-container .btn-section .error.show {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+main .container .content form .input-container .btn-section .submit-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  min-width: 90px;
+  padding-top: 0.4rem;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border-radius: 50px;
+  height: 100%;
+}
+main .container .content form .input-container .btn-section .submit-btn:hover {
+  translate: 0px -0.3px;
+  background: linear-gradient(135deg, hsla(0deg, 80%, 86%, 0.5), hsla(0deg, 74%, 74%, 0.7));
+}
+main .container .content form .danger-text {
+  margin-top: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
