@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,52 +24,49 @@
 </head>
 
 <body>
-  <main>
-    <div class="container">
-      <div class="header">
-        <img src="./images/logo.svg" alt="">
-      </div>
-      <div class="hero-section">
-        <img src="./images/hero-desktop.jpg" alt="hero-img" class="hero-desktop">
-        <img class="hero-mobile" src="./images/hero-mobile.jpg" alt="hero-img">
-      </div>
-      <div class="content">
-        <div class="desktop-logo">
-          <img src="./images/logo.svg" alt="">
-        </div>
-        <p class="heading">
-          <span>We're</span> coming <br /> soon
-        </p>
-        <p class="description">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our launch deals.
-        </p>
-        <form action="/index.html" id="form" novalidate>
-          <div class="input-container">
-            <input type="email" class="form-control" placeholder="Email Address">
-            <div class="btn-section">
-              <div class="error">
-                <img src="./images/icon-error.svg" alt="">
-              </div>
-              <button title="submit" type="submit" class="submit-btn">
-                <img src="./images/icon-arrow.svg" alt="" class="arrow">
-              </button>
-            </div>
-          </div>
-          <div class="danger-text">
-            please provide a valid email
-          </div>
-        </form>
-      </div>
+  <div class="container">
+    <div class="header">
+      <img src="./images/logo.svg" alt="" />
     </div>
-  </main>
-
-
+    <div class="hero-section">
+      <img src="./images/hero-desktop.jpg" alt="hero-img" class="hero-desktop" />
+      <img class="hero-mobile" src="./images/hero-mobile.jpg" alt="hero-img" />
+    </div>
+    <div class="content">
+      <div class="desktop-logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <p class="heading">
+        <span>We're</span><br /> coming <br />
+        soon
+      </p>
+      <p class="description">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <form action="/index.html" id="form" target="./" novalidate>
+        <div class="input-container">
+          <input type="email" class="form-control" placeholder="Email Address" required />
+          <div class="btn-section">
+            <div class="error">
+              <img src="./images/icon-error.svg" alt="" />
+            </div>
+            <button title="submit" type="submit" class="submit-btn">
+              <img src="./images/icon-arrow.svg" alt="" class="arrow" />
+            </button>
+          </div>
+        </div>
+        <div class="danger-text">Please provide a valid email</div>
+      </form>
+    </div>
+  </div>
 
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+        href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>

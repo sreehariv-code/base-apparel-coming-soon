@@ -13,125 +13,156 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-main {
+.container {
+  display: flex;
   min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  height: inherit;
   background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%)), linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
 }
-main .container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+.container .header {
+  padding: 2rem;
 }
-main .container .header {
-  opacity: 0;
+.container .header img {
+  width: 40%;
+}
+.container .hero-section {
+  width: 100%;
+  max-height: 250px;
+}
+.container .hero-section .hero-desktop {
   display: none;
 }
-main .container .hero-section {
-  min-width: 500px;
-  display: flex;
-}
-main .container .hero-section .hero-desktop {
+.container .hero-section .hero-mobile {
   width: 100%;
+  height: auto;
 }
-main .container .hero-section .hero-mobile {
-  opacity: 0;
+.container .content {
+  padding-top: 4rem;
+  min-height: 600px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.container .content .desktop-logo {
   display: none;
 }
-main .container .content {
-  background: url("./images/bg-pattern-desktop.svg");
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: cover;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 9rem;
-}
-main .container .content .desktop-logo {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  display: block;
-}
-main .container .content .heading {
-  padding-top: 3rem;
-  font-size: 4rem;
-  display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
+.container .content .heading {
   letter-spacing: 15px;
-  color: var(--d-g-red);
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
 }
-main .container .content .heading span {
+.container .content .heading span {
   font-weight: 200;
+  font-size: 3rem;
   color: var(--d-red);
-  font-size: inherit;
 }
-main .container .content .description {
+.container .content .description {
+  margin-top: 2rem;
+  text-align: center;
   color: var(--d-red);
-  width: 45ch;
-  margin-top: 1rem;
-  line-height: 1.5rem;
+  width: 35ch;
 }
-main .container .content form {
-  margin-top: 1.4rem;
+.container .content form {
+  margin-top: 3rem;
   width: 100%;
-  position: relative;
-  padding-bottom: 5rem;
-}
-main .container .content form .input-container {
-  border: 1.5px solid var(--d-red);
-  max-width: 390px;
-  min-height: 50px;
-  display: flex;
-  overflow: hidden;
-  justify-content: space-between;
-  border-radius: 50px;
-}
-main .container .content form .input-container input {
-  outline: none;
-  border: none;
-  padding: 1.2rem 0 1rem 1.3rem;
-  background: transparent;
-}
-main .container .content form .input-container ::-moz-placeholder {
-  color: var(--d-red);
-}
-main .container .content form .input-container :-ms-input-placeholder {
-  color: var(--d-red);
-}
-main .container .content form .input-container ::placeholder {
-  color: var(--d-red);
-}
-main .container .content form .input-container .btn-section {
-  display: flex;
-}
-main .container .content form .input-container .btn-section .error {
-  display: none;
-  opacity: 0;
-  height: 100%;
-}
-main .container .content form .input-container .btn-section .error.show {
   display: flex;
   align-items: center;
-  opacity: 1;
+  flex-direction: column;
 }
-main .container .content form .input-container .btn-section .submit-btn {
-  cursor: pointer;
-  outline: none;
+.container .content form .input-container {
+  display: flex;
+  border: 2px solid var(--d-red);
+  justify-content: space-between;
+  border-radius: 125px;
+  min-width: 302px;
+}
+.container .content form .input-container ::-moz-placeholder {
+  font-size: 0.9rem;
+  color: var(--d-red);
+}
+.container .content form .input-container :-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: var(--d-red);
+}
+.container .content form .input-container ::placeholder {
+  font-size: 0.9rem;
+  color: var(--d-red);
+}
+.container .content form .input-container input {
   border: none;
-  min-width: 90px;
-  padding-top: 0.4rem;
+  outline: none;
+  background: inherit;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+}
+.container .content form .input-container .btn-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container .content form .input-container .btn-section .submit-btn {
+  border: none;
+  outline: none;
   background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
-  border-radius: 50px;
+  min-width: 70px;
+  border-radius: 125px;
+  min-height: 50px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .container .content form .input-container .btn-section .submit-btn:hover {
-  translate: 0px -0.3px;
-  background: linear-gradient(135deg, hsla(0deg, 80%, 86%, 0.5), hsla(0deg, 74%, 74%, 0.7));
-}
-main .container .content form .danger-text {
+.container .content form .danger-text {
   margin-top: 1.5rem;
+  color: rgba(255, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 449px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+  .container .header {
+    display: none;
+  }
+  .container .hero-section {
+    width: 40%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .container .hero-section .hero-mobile {
+    display: none;
+  }
+  .container .hero-section .hero-desktop {
+    display: block;
+  }
+  .container .content {
+    width: 60%;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+    padding-left: 10rem;
+    padding-top: 5rem;
+    background: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container .content .heading {
+    text-align: left;
+    margin-top: 5rem;
+  }
+  .container .content .description {
+    text-align: left;
+    width: 40ch;
+    line-height: 1.6rem;
+  }
+  .container .content form {
+    max-width: 400px;
+    display: block;
+  }
+  .container .content .desktop-logo {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
