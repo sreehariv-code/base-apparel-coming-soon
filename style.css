@@ -154,6 +154,7 @@
   }
   .container .hero-section .hero-desktop {
     display: block;
+    width: 100%;
   }
   .container .content {
     width: 60%;

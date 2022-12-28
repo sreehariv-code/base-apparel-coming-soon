@@ -4,6 +4,8 @@ var errorSign = form.querySelector(".error");
 var textDanger = document.getElementsByClassName("danger-text");
 var inputContainer = form.getElementsByClassName("input-container");
 
+
+
 form.onsubmit = (e) => {
   e.preventDefault();
   //   console.log(email.value);
