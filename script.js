@@ -30,7 +30,7 @@ function validateEmail(input) {
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (input.match(validRegex)) {
     // alert("Valid mail id");
-    if (errorSign.classList.co) email.focus();
+    // if (errorSign.classList.co) email.focus();
     return true;
   } else {
     // alert("invalid email");
